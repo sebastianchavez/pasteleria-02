@@ -1,0 +1,341 @@
+/* Estilos personalizados - Pastelería Dulce Tentación */
+
+:root {
+  --color-crema: #FFFBF7;
+  --color-rosa-claro: #FCE7F3;
+  --color-rosa-medio: #F9A8D4;
+  --color-rosa-oscuro: #EC4899;
+  --color-chocolate: #5B3A29;
+  --color-chocolate-claro: #8B6F47;
+  --color-dorado: #D4A574;
+  --color-dorado-claro: #E8C39E;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-crema);
+  color: var(--color-chocolate);
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+.navbar-scrolled {
+  background-color: rgba(255, 251, 247, 0.95);
+  box-shadow: 0 4px 20px rgba(91, 58, 41, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-rosa-medio);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--color-rosa-oscuro);
+}
+
+/* Botones */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-rosa-medio), var(--color-rosa-oscuro));
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-chocolate);
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 2px solid var(--color-chocolate);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-chocolate);
+  color: white;
+}
+
+/* Cards */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(91, 58, 41, 0.15);
+}
+
+/* Hero */
+.hero-pattern {
+  background-image: radial-gradient(circle at 20% 30%, rgba(252, 231, 243, 0.6) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(212, 165, 116, 0.3) 0%, transparent 50%);
+}
+
+/* Sprinkles decorativos */
+.sprinkle {
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  border-radius: 9999px;
+  transform: rotate(var(--rotation, 0deg));
+  opacity: 0.7;
+}
+
+/* Galería */
+.gallery-item {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.gallery-item img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-filter-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-chocolate-claro);
+  color: var(--color-chocolate);
+  background: transparent;
+}
+
+.gallery-filter-btn.active,
+.gallery-filter-btn:hover {
+  background-color: var(--color-rosa-oscuro);
+  color: white;
+  border-color: var(--color-rosa-oscuro);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 0.75rem;
+}
+
+/* Formulario */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5d6c4;
+  border-radius: 0.5rem;
+  background-color: white;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-rosa-medio);
+  box-shadow: 0 0 0 3px rgba(249, 168, 212, 0.3);
+}
+
+.form-input.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+}
+
+/* Floating shapes */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.rotate-animation {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Botón volver arriba */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-rosa-medio), var(--color-rosa-oscuro));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+}
+
+/* Decoración con sprinkles */
+.sprinkles-decoration {
+  position: relative;
+  overflow: hidden;
+}
+
+.sprinkles-decoration::before,
+.sprinkles-decoration::after {
+  content: '•';
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.4;
+}
+
+/* Texto con gradiente */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-rosa-oscuro), var(--color-chocolate));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background-color: var(--color-crema);
+  z-index: 100;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Print styles */
+@media print {
+  .navbar, .footer, .back-to-top { display: none; }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-rosa-claro);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-rosa-medio);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rosa-oscuro);
+}

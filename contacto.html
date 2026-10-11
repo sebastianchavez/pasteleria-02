@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos para pedidos, eventos o dudas. Estamos en Santiago de Chile.">
+  <title>Contacto - Dulce Tentación</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: '#FFFBF7',
+            rosa: { claro: '#FCE7F3', medio: '#F9A8D4', oscuro: '#EC4899' },
+            chocolate: { DEFAULT: '#5B3A29', claro: '#8B6F47' },
+            dorado: { DEFAULT: '#D4A574', claro: '#E8C39E' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body class="bg-crema text-chocolate">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="assets/logo.svg" alt="Logo" class="w-10 h-10">
+          <span class="font-display font-bold text-xl md:text-2xl">Dulce Tentación</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link font-medium">Inicio</a>
+          <a href="nosotros.html" class="nav-link font-medium">Nosotros</a>
+          <a href="servicios.html" class="nav-link font-medium">Servicios</a>
+          <a href="galeria.html" class="nav-link font-medium">Galería</a>
+          <a href="clases.html" class="nav-link font-medium">Clases</a>
+          <a href="precios.html" class="nav-link font-medium">Precios</a>
+          <a href="contacto.html" class="nav-link font-medium">Contacto</a>
+          <a href="contacto.html" class="btn-primary text-sm">Reservar<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <button id="mobileMenuBtn" class="lg:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="mobileOverlay" class="mobile-overlay"></div>
+  <div id="mobileMenu" class="mobile-menu">
+    <button id="mobileCloseBtn" class="absolute top-6 right-6"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <div class="flex flex-col gap-6 mt-16">
+      <a href="index.html" class="text-xl font-medium">Inicio</a>
+      <a href="nosotros.html" class="text-xl font-medium">Nosotros</a>
+      <a href="servicios.html" class="text-xl font-medium">Servicios</a>
+      <a href="galeria.html" class="text-xl font-medium">Galería</a>
+      <a href="clases.html" class="text-xl font-medium">Clases</a>
+      <a href="precios.html" class="text-xl font-medium">Precios</a>
+      <a href="contacto.html" class="text-xl font-medium">Contacto</a>
+      <a href="politicas.html" class="text-base text-chocolate/70">Políticas</a>
+      <a href="terminos.html" class="text-base text-chocolate/70">Términos</a>
+      <a href="contacto.html" class="btn-primary text-center mt-4">Reservar ahora</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-12 bg-gradient-to-b from-rosa-claro to-crema">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <span class="text-rosa-oscuro font-medium">Estamos aquí para ti</span>
+      <h1 class="font-display text-5xl md:text-6xl font-bold mt-3 mb-6">Contacto</h1>
+      <p class="text-lg text-chocolate/70 max-w-3xl mx-auto">
+        Escríbenos, llámanos o visítanos. Estaremos encantados de ayudarte.
+      </p>
+    </div>
+  </section>
+
+  <!-- INFORMACIÓN DE CONTACTO -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center card-hover">
+          <div class="w-16 h-16 mx-auto bg-rosa-claro rounded-full flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-rosa-oscuro" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <h4 class="font-display font-bold text-lg mb-2">Teléfono</h4>
+          <a href="tel:+56228975432" class="text-chocolate/70 hover:text-rosa-oscuro">+56 2 2897 5432</a>
+          <p class="text-sm text-chocolate/50 mt-1">Lun - Sáb</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center card-hover">
+          <div class="w-16 h-16 mx-auto bg-rosa-claro rounded-full flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-rosa-oscuro" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h4 class="font-display font-bold text-lg mb-2">Email</h4>
+          <a href="mailto:hola@dulcetentacion.cl" class="text-chocolate/70 hover:text-rosa-oscuro">hola@dulcetentacion.cl</a>
+          <p class="text-sm text-chocolate/50 mt-1">Respondemos en 24h</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center card-hover">
+          <div class="w-16 h-16 mx-auto bg-rosa-claro rounded-full flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-rosa-oscuro" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </div>
+          <h4 class="font-display font-bold text-lg mb-2">WhatsApp</h4>
+          <a href="https://wa.me/56912345678" target="_blank" class="text-chocolate/70 hover:text-rosa-oscuro">+56 9 1234 5678</a>
+          <p class="text-sm text-chocolate/50 mt-1">Respuesta rápida</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO Y MAPA -->
+  <section class="py-12 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        
+        <!-- FORMULARIO -->
+        <div data-aos="fade-right">
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-2">Envíanos un mensaje</h2>
+          <p class="text-chocolate/70 mb-6">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+          
+          <form id="contactForm" class="space-y-5 bg-white p-8 rounded-2xl shadow-md">
+            <div>
+              <label for="nombre" class="block text-sm font-semibold mb-2">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" required class="form-input" placeholder="Tu nombre">
+              <p id="nombreError" class="error-message"></p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="block text-sm font-semibold mb-2">Email *</label>
+                <input type="email" id="email" name="email" required class="form-input" placeholder="tu@email.com">
+                <p id="emailError" class="error-message"></p>
+              </div>
+              <div>
+                <label for="telefono" class="block text-sm font-semibold mb-2">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required class="form-input" placeholder="+56 9 0000 0000">
+                <p id="telefonoError" class="error-message"></p>
+              </div>
+            </div>
+            
+            <div>
+              <label for="tipoConsulta" class="block text-sm font-semibold mb-2">Tipo de consulta *</label>
+              <select id="tipoConsulta" name="tipoConsulta" required class="form-input">
+                <option value="">Selecciona una opción</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="mensaje" class="block text-sm font-semibold mb-2">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required class="form-input resize-none" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+              <p id="mensajeError" class="error-message"></p>
+            </div>
+            
+            <div class="flex items-start gap-2">
+              <input type="checkbox" id="acepta" name="acepta" required class="mt-1">
+              <label for="acepta" class="text-sm text-chocolate/70">Acepto la <a href="politicas.html" class="text-rosa-oscuro hover:underline">política de privacidad</a> *</label>
+            </div>
+            
+            <button type="submit" class="btn-primary w-full justify-center">
+              Enviar mensaje
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </form>
+          
+          <!-- Mensaje de éxito -->
+          <div id="formSuccess" class="hidden bg-green-50 border-2 border-green-200 p-6 rounded-2xl text-center">
+            <div class="text-5xl mb-3">✅</div>
+            <h3 class="font-display font-bold text-2xl text-green-800 mb-2">¡Mensaje enviado!</h3>
+            <p class="text-green-700">Hemos recibido tu mensaje. Te responderemos en menos de 24 horas.</p>
+          </div>
+        </div>
+        
+        <!-- MAPA Y HORARIOS -->
+        <div data-aos="fade-left" class="space-y-6">
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-2">Visítanos</h2>
+              <p class="text-chocolate/70 mb-4">Estamos en pleno Providencia, con fácil acceso a Metro y estacionamientos.</p>
+              <div class="bg-white p-4 rounded-2xl shadow-md mb-4 flex items-start gap-3">
+                <svg class="w-6 h-6 text-rosa-oscuro flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <div>
+                  <p class="font-semibold">Av. Providencia 1234</p>
+                  <p class="text-sm text-chocolate/60">Providencia, Santiago, Chile</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rounded-2xl overflow-hidden shadow-lg h-80">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.123456789!2d-70.6099!3d-33.4242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a8a5b7a7b7%3A0x1234567890abcdef!2sAv.%20Providencia%2C%20Santiago%2C%20Chile!5e0!3m2!1ses-419!2scl!4v1234567890" 
+                      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          
+          <!-- HORARIOS -->
+          <div class="bg-white p-6 rounded-2xl shadow-md">
+            <h3 class="font-display font-bold text-2xl mb-4 flex items-center gap-2">
+              <svg class="w-6 h-6 text-rosa-oscuro" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Horarios de Atención
+            </h3>
+            <div class="space-y-3" id="horarios-container">
+              <!-- Generado por JS -->
+            </div>
+            <div class="mt-6 pt-4 border-t border-rosa-claro text-center">
+              <p class="text-sm text-chocolate/60">
+                💡 Recomendamos reservar con al menos 48h de antelación para pedidos personalizados
+              </p>
+            </div>
+          </div>
+          
+          <!-- REDES SOCIALES -->
+          <div class="bg-gradient-to-br from-rosa-claro to-dorado-claro p-6 rounded-2xl">
+            <h3 class="font-display font-bold text-xl mb-3">Síguenos en redes</h3>
+            <p class="text-chocolate/70 text-sm mb-4">Inspiración diaria, novedades y detrás de cámaras</p>
+            <div class="flex gap-3">
+              <a href="#" class="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition shadow-md">
+                <svg class="w-6 h-6 text-chocolate" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="#" class="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition shadow-md">
+                <svg class="w-6 h-6 text-chocolate" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" class="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition shadow-md">
+                <svg class="w-6 h-6 text-chocolate" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-chocolate text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/logo.svg" alt="Logo" class="w-10 h-10">
+            <span class="font-display font-bold text-2xl">Dulce Tentación</span>
+          </div>
+          <p class="text-white/70 max-w-md">Pastelería artesanal hecha con amor. Endulzando los momentos más especiales de tu vida desde 2010.</p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-medio transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-medio transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-medio transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg mb-4">Navegación</h4>
+          <ul class="space-y-2 text-white/70">
+            <li><a href="index.html" class="hover:text-rosa-medio transition">Inicio</a></li>
+            <li><a href="nosotros.html" class="hover:text-rosa-medio transition">Nosotros</a></li>
+            <li><a href="servicios.html" class="hover:text-rosa-medio transition">Servicios</a></li>
+            <li><a href="galeria.html" class="hover:text-rosa-medio transition">Galería</a></li>
+            <li><a href="clases.html" class="hover:text-rosa-medio transition">Clases</a></li>
+            <li><a href="precios.html" class="hover:text-rosa-medio transition">Precios</a></li>
+            <li><a href="contacto.html" class="hover:text-rosa-medio transition">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg mb-4">Legal</h4>
+          <ul class="space-y-2 text-white/70">
+            <li><a href="politicas.html" class="hover:text-rosa-medio transition">Políticas de Privacidad</a></li>
+            <li><a href="terminos.html" class="hover:text-rosa-medio transition">Términos y Condiciones</a></li>
+          </ul>
+          <h4 class="font-display font-bold text-lg mt-6 mb-4">Contacto</h4>
+          <ul class="space-y-2 text-white/70 text-sm">
+            <li>📞 +56 2 2897 5432</li>
+            <li>✉️ hola@dulcetentacion.cl</li>
+            <li>📍 Av. Providencia 1234, Santiago</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+        <p>© 2026 Dulce Tentación. Todos los derechos reservados. Hecho con 💕 y mucha azúcar.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/contacto.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('horarios-container');
+      if (container && typeof PASTELERIA_DATA !== 'undefined') {
+        container.innerHTML = PASTELERIA_DATA.horarios.map(h => `
+          <div class="flex justify-between items-center py-2 border-b border-rosa-claro last:border-0">
+            <span class="font-semibold">${h.dia}</span>
+            <span class="text-chocolate/70 text-sm">${h.mañana} ${h.tarde !== 'Cerrado' ? '/ ' + h.tarde : ''}</span>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>

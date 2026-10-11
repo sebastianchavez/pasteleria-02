@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lista de precios y planes para tortas, eventos y catering.">
+  <title>Precios - Dulce Tentación</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: '#FFFBF7',
+            rosa: { claro: '#FCE7F3', medio: '#F9A8D4', oscuro: '#EC4899' },
+            chocolate: { DEFAULT: '#5B3A29', claro: '#8B6F47' },
+            dorado: { DEFAULT: '#D4A574', claro: '#E8C39E' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body class="bg-crema text-chocolate">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="assets/logo.svg" alt="Logo" class="w-10 h-10">
+          <span class="font-display font-bold text-xl md:text-2xl">Dulce Tentación</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link font-medium">Inicio</a>
+          <a href="nosotros.html" class="nav-link font-medium">Nosotros</a>
+          <a href="servicios.html" class="nav-link font-medium">Servicios</a>
+          <a href="galeria.html" class="nav-link font-medium">Galería</a>
+          <a href="clases.html" class="nav-link font-medium">Clases</a>
+          <a href="precios.html" class="nav-link font-medium">Precios</a>
+          <a href="contacto.html" class="nav-link font-medium">Contacto</a>
+          <a href="contacto.html" class="btn-primary text-sm">Reservar<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <button id="mobileMenuBtn" class="lg:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="mobileOverlay" class="mobile-overlay"></div>
+  <div id="mobileMenu" class="mobile-menu">
+    <button id="mobileCloseBtn" class="absolute top-6 right-6"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <div class="flex flex-col gap-6 mt-16">
+      <a href="index.html" class="text-xl font-medium">Inicio</a>
+      <a href="nosotros.html" class="text-xl font-medium">Nosotros</a>
+      <a href="servicios.html" class="text-xl font-medium">Servicios</a>
+      <a href="galeria.html" class="text-xl font-medium">Galería</a>
+      <a href="clases.html" class="text-xl font-medium">Clases</a>
+      <a href="precios.html" class="text-xl font-medium">Precios</a>
+      <a href="contacto.html" class="text-xl font-medium">Contacto</a>
+      <a href="politicas.html" class="text-base text-chocolate/70">Políticas</a>
+      <a href="terminos.html" class="text-base text-chocolate/70">Términos</a>
+      <a href="contacto.html" class="btn-primary text-center mt-4">Reservar ahora</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-20 bg-gradient-to-b from-rosa-claro to-crema">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <span class="text-rosa-oscuro font-medium">Precios transparentes</span>
+      <h1 class="font-display text-5xl md:text-6xl font-bold mt-3 mb-6">Nuestros Precios</h1>
+      <p class="text-lg text-chocolate/70 max-w-3xl mx-auto">
+        Calidad artesanal a precios justos. Elige el plan perfecto para tu celebración.
+      </p>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section class="py-20 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="font-display text-4xl md:text-5xl font-bold">Paquetes para Eventos</h2>
+        <p class="text-chocolate/70 mt-4 max-w-2xl mx-auto">Soluciones completas para que solo te preocupes de disfrutar.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8" id="planes-container">
+        <!-- Generado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TORTAS POR TAMAÑO -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="font-display text-4xl md:text-5xl font-bold">Tortas por Tamaño</h2>
+        <p class="text-chocolate/70 mt-4 max-w-2xl mx-auto">Elige el tamaño perfecto según tu número de invitados.</p>
+      </div>
+      
+      <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl overflow-hidden" data-aos="fade-up">
+        <table class="w-full">
+          <thead>
+            <tr class="bg-gradient-to-r from-rosa-medio to-rosa-oscuro text-white">
+              <th class="p-5 text-left font-display text-lg">Tamaño</th>
+              <th class="p-5 text-right font-display text-lg">Precio</th>
+            </tr>
+          </thead>
+          <tbody id="tortas-container">
+            <!-- Generado por JS -->
+          </tbody>
+        </table>
+      </div>
+      
+      <p class="text-center text-chocolate/60 text-sm mt-6" data-aos="fade-up">
+        💡 Los precios pueden variar según el diseño, ingredientes especiales y decoración adicional.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS INDIVIDUALES -->
+  <section class="py-20 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="font-display text-4xl md:text-5xl font-bold">Precios por Producto</h2>
+        <p class="text-chocolate/70 mt-4 max-w-2xl mx-auto">Compra individual o por docenas con descuento.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="productos-container">
+        <!-- Generado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- INFORMACIÓN ADICIONAL -->
+  <section class="py-20 bg-chocolate text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div data-aos="fade-right">
+          <h3 class="font-display text-3xl font-bold mb-4">💳 Formas de Pago</h3>
+          <ul class="space-y-2 text-white/80">
+            <li>✓ Efectivo</li>
+            <li>✓ Tarjeta de crédito/débito</li>
+            <li>✓ Transferencia bancaria</li>
+            <li>✓ WebPay (Transbank)</li>
+            <li>✓ Mercado Pago</li>
+            <li>✓ Mach / Tenpo prepago</li>
+          </ul>
+        </div>
+        <div data-aos="fade-left">
+          <h3 class="font-display text-3xl font-bold mb-4">🚚 Entregas</h3>
+          <ul class="space-y-2 text-white/80">
+            <li>✓ Retiro en tienda (gratis)</li>
+            <li>✓ Despacho en Santiago (gratis sobre $50.000)</li>
+            <li>✓ Envío a regiones vía Starken o Chilexpress</li>
+            <li>✓ Montaje en evento incluido</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center p-8 bg-white/5 rounded-2xl" data-aos="fade-up">
+        <h4 class="font-display text-2xl font-bold mb-2">¿Necesitas algo personalizado?</h4>
+        <p class="text-white/80 mb-6 max-w-2xl mx-auto">Cada evento es único. Solicita una cotización personalizada y nos adaptamos a tu presupuesto.</p>
+        <a href="contacto.html" class="btn-primary inline-flex">Solicitar cotización<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-chocolate text-white py-16 border-t border-white/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/logo.svg" alt="Logo" class="w-10 h-10">
+            <span class="font-display font-bold text-2xl">Dulce Tentación</span>
+          </div>
+          <p class="text-white/70 max-w-md">Pastelería artesanal hecha con amor. Endulzando los momentos más especiales de tu vida desde 2010.</p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-medio transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-medio transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-medio transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg mb-4">Navegación</h4>
+          <ul class="space-y-2 text-white/70">
+            <li><a href="index.html" class="hover:text-rosa-medio transition">Inicio</a></li>
+            <li><a href="nosotros.html" class="hover:text-rosa-medio transition">Nosotros</a></li>
+            <li><a href="servicios.html" class="hover:text-rosa-medio transition">Servicios</a></li>
+            <li><a href="galeria.html" class="hover:text-rosa-medio transition">Galería</a></li>
+            <li><a href="clases.html" class="hover:text-rosa-medio transition">Clases</a></li>
+            <li><a href="precios.html" class="hover:text-rosa-medio transition">Precios</a></li>
+            <li><a href="contacto.html" class="hover:text-rosa-medio transition">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg mb-4">Legal</h4>
+          <ul class="space-y-2 text-white/70">
+            <li><a href="politicas.html" class="hover:text-rosa-medio transition">Políticas de Privacidad</a></li>
+            <li><a href="terminos.html" class="hover:text-rosa-medio transition">Términos y Condiciones</a></li>
+          </ul>
+          <h4 class="font-display font-bold text-lg mt-6 mb-4">Contacto</h4>
+          <ul class="space-y-2 text-white/70 text-sm">
+            <li>📞 +56 2 2897 5432</li>
+            <li>✉️ hola@dulcetentacion.cl</li>
+            <li>📍 Av. Providencia 1234, Santiago</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+        <p>© 2026 Dulce Tentación. Todos los derechos reservados. Hecho con 💕 y mucha azúcar.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Planes
+      const planesContainer = document.getElementById('planes-container');
+      if (planesContainer && typeof PASTELERIA_DATA !== 'undefined') {
+        planesContainer.innerHTML = PASTELERIA_DATA.precios.planes.map((plan, idx) => `
+          <div class="bg-white rounded-2xl shadow-md p-8 card-hover ${plan.destacado ? 'ring-2 ring-rosa-oscuro relative' : ''}" data-aos="fade-up" data-aos-delay="${idx * 100}">
+            ${plan.destacado ? '<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-rosa-oscuro text-white text-xs font-bold uppercase px-4 py-1 rounded-full">Más popular</div>' : ''}
+            <div class="text-center">
+              <h3 class="font-display font-bold text-2xl mb-2">${plan.nombre}</h3>
+              <p class="text-chocolate/60 text-sm mb-4">${plan.descripcion}</p>
+              <div class="my-6">
+                <span class="font-display text-5xl font-bold text-rosa-oscuro">${plan.precio}</span>
+              </div>
+            </div>
+            <ul class="space-y-3 mb-8">
+              ${plan.incluye.map(item => `
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-rosa-oscuro flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-chocolate/80 text-sm">${item}</span>
+                </li>
+              `).join('')}
+            </ul>
+            <a href="contacto.html" class="${plan.destacado ? 'btn-primary' : 'btn-secondary'} w-full justify-center">
+              Contratar
+            </a>
+          </div>
+        `).join('');
+      }
+      
+      // Tortas por tamaño
+      const tortasContainer = document.getElementById('tortas-container');
+      if (tortasContainer && typeof PASTELERIA_DATA !== 'undefined') {
+        tortasContainer.innerHTML = PASTELERIA_DATA.precios.tortas.map((torta, idx) => `
+          <tr class="${idx % 2 === 0 ? 'bg-rosa-claro/30' : 'bg-white'} hover:bg-rosa-claro/50 transition">
+            <td class="p-5 font-medium">${torta.tamaño}</td>
+            <td class="p-5 text-right font-display font-bold text-rosa-oscuro">${torta.precio}</td>
+          </tr>
+        `).join('');
+      }
+      
+      // Productos individuales
+      const productosContainer = document.getElementById('productos-container');
+      if (productosContainer && typeof PASTELERIA_DATA !== 'undefined') {
+        productosContainer.innerHTML = PASTELERIA_DATA.servicios.map((producto, idx) => `
+          <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover" data-aos="fade-up" data-aos-delay="${idx * 100}">
+            <div class="h-40 overflow-hidden">
+              <img src="${producto.imagen}" alt="${producto.titulo}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-bold text-lg">${producto.titulo}</h3>
+                <span class="text-rosa-oscuro font-bold">${producto.precioDesde}</span>
+              </div>
+              <p class="text-chocolate/60 text-sm">Unidad / consultar descuentos por volumen</p>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>

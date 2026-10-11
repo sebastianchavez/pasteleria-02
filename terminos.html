@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Términos y condiciones de uso del sitio web y servicios de Dulce Tentación.">
+  <title>Términos y Condiciones - Dulce Tentación</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: '#FFFBF7',
+            rosa: { claro: '#FCE7F3', medio: '#F9A8D4', oscuro: '#EC4899' },
+            chocolate: { DEFAULT: '#5B3A29', claro: '#8B6F47' },
+            dorado: { DEFAULT: '#D4A574', claro: '#E8C39E' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body class="bg-crema text-chocolate">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="assets/logo.svg" alt="Logo" class="w-10 h-10">
+          <span class="font-display font-bold text-xl md:text-2xl">Dulce Tentación</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link font-medium">Inicio</a>
+          <a href="nosotros.html" class="nav-link font-medium">Nosotros</a>
+          <a href="servicios.html" class="nav-link font-medium">Servicios</a>
+          <a href="galeria.html" class="nav-link font-medium">Galería</a>
+          <a href="clases.html" class="nav-link font-medium">Clases</a>
+          <a href="precios.html" class="nav-link font-medium">Precios</a>
+          <a href="contacto.html" class="nav-link font-medium">Contacto</a>
+          <a href="contacto.html" class="btn-primary text-sm">Reservar<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <button id="mobileMenuBtn" class="lg:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="mobileOverlay" class="mobile-overlay"></div>
+  <div id="mobileMenu" class="mobile-menu">
+    <button id="mobileCloseBtn" class="absolute top-6 right-6"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <div class="flex flex-col gap-6 mt-16">
+      <a href="index.html" class="text-xl font-medium">Inicio</a>
+      <a href="nosotros.html" class="text-xl font-medium">Nosotros</a>
+      <a href="servicios.html" class="text-xl font-medium">Servicios</a>
+      <a href="galeria.html" class="text-xl font-medium">Galería</a>
+      <a href="clases.html" class="text-xl font-medium">Clases</a>
+      <a href="precios.html" class="text-xl font-medium">Precios</a>
+      <a href="contacto.html" class="text-xl font-medium">Contacto</a>
+      <a href="politicas.html" class="text-base text-chocolate/70">Políticas</a>
+      <a href="terminos.html" class="text-base text-chocolate/70">Términos</a>
+      <a href="contacto.html" class="btn-primary text-center mt-4">Reservar ahora</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-12 bg-gradient-to-b from-rosa-claro to-crema">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <span class="text-rosa-oscuro font-medium">Condiciones de uso</span>
+      <h1 class="font-display text-5xl md:text-6xl font-bold mt-3 mb-6">Términos y Condiciones</h1>
+      <p class="text-sm text-chocolate/60">Última actualización: 1 de octubre de 2026</p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white p-8 md:p-12 rounded-2xl shadow-lg space-y-8" data-aos="fade-up">
+        
+        <div class="flex items-start gap-4 pb-6 border-b border-rosa-claro">
+          <div class="text-4xl">📜</div>
+          <div>
+            <h2 class="font-display font-bold text-2xl mb-2">Introducción</h2>
+            <p class="text-chocolate/80 leading-relaxed">
+              Bienvenido a Dulce Tentación. Al acceder y utilizar nuestro sitio web y servicios, aceptas cumplir con los siguientes términos y condiciones. Si no estás de acuerdo con alguno de ellos, te recomendamos no utilizar el sitio.
+            </p>
+          </div>
+        </div>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">1. Aceptación de los Términos</h2>
+          <p class="text-chocolate/80 leading-relaxed">
+            El uso de este sitio web implica la aceptación plena de estos términos y condiciones. Dulce Tentación se reserva el derecho de modificar estos términos en cualquier momento, siendo efectivos desde su publicación en el sitio web.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">2. Servicios Ofrecidos</h2>
+          <p class="text-chocolate/80 leading-relaxed mb-3">Dulce Tentación ofrece los siguientes servicios:</p>
+          <ul class="space-y-2 text-chocolate/80 ml-4">
+            <li class="flex gap-2"><span class="text-rosa-oscuro">•</span> Elaboración y venta de productos de pastelería artesanal.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">•</span> Catering y mesas dulces para eventos.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">•</span> Tortas personalizadas y por encargo.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">•</span> Clases y cursos de pastelería.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">•</span> Servicio de entrega a domicilio.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">3. Pedidos y Pagos</h2>
+          <p class="text-chocolate/80 leading-relaxed mb-3">
+            Los pedidos se confirman mediante el pago total o de una señal del 50%. El pago se puede realizar mediante efectivo, tarjeta, transferencia bancaria, Bizum o PayPal.
+          </p>
+          <ul class="space-y-2 text-chocolate/80 ml-4">
+            <li class="flex gap-2"><span class="text-rosa-oscuro">✓</span> Los precios indicados incluyen IVA.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">✓</span> Pedidos personalizados requieren al menos 5 días de antelación.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">✓</span> Para bodas y eventos grandes se requieren 30 días de antelación.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">✓</span> Una vez confirmado el pago, el pedido pasa a producción.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">4. Entregas</h2>
+          <p class="text-chocolate/80 leading-relaxed">
+            Realizamos entregas en Santiago y regiones a través de couriers locales (Starken, Chilexpress) o mensajería propia en el radio urbano de Santiago. El plazo de entrega depende del tipo de pedido y se confirmará al momento de la contratación. Para pedidos especiales, el cliente puede optar por retiro en tienda. Los gastos de envío se calculan según la distancia y el peso del pedido.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">5. Devoluciones y Cancelaciones</h2>
+          <p class="text-chocolate/80 leading-relaxed mb-3">
+            Por la naturaleza artesanal y perecedera de nuestros productos:
+          </p>
+          <ul class="space-y-2 text-chocolate/80 ml-4">
+            <li class="flex gap-2"><span class="text-rosa-oscuro">→</span> No se aceptan devoluciones una vez elaborado el producto.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">→</span> Cancelaciones con más de 7 días de antelación: reembolso del 80%.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">→</span> Cancelaciones entre 3-7 días: reembolso del 50%.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">→</span> Cancelaciones con menos de 3 días: sin reembolso.</li>
+            <li class="flex gap-2"><span class="text-rosa-oscuro">→</span> Si el producto llega en mal estado, se procederá a la reposición o reembolso total.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">6. Alergias y Restricciones Alimentarias</h2>
+          <p class="text-chocolate/80 leading-relaxed">
+            Trabajamos con alérgenos comunes (gluten, lácteos, frutos secos, huevos). Es responsabilidad del cliente informar sobre cualquier alergia o restricción alimentaria al realizar el pedido. Aunque tomamos todas las precauciones, no podemos garantizar que nuestros productos estén libres completamente de trazas de alérgenos al trabajar en un obrador compartido.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">7. Propiedad Intelectual</h2>
+          <p class="text-chocolate/80 leading-relaxed">
+            Todo el contenido de este sitio web (textos, imágenes, diseños, recetas, logotipos) es propiedad de Dulce Tentación o de los titulares de los derechos correspondientes. No se permite la reproducción total o parcial sin autorización expresa por escrito.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">8. Clases y Cursos</h2>
+          <p class="text-chocolate/80 leading-relaxed">
+            Las plazas en las clases son limitadas y se confirman por orden de pago. Las cancelaciones por parte del alumno deben comunicarse con al menos 48 horas de antelación para poder reagendar. Dulce Tentación se reserva el derecho de cancelar una clase por motivos justificados, ofreciendo reagendamiento o reembolso completo.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">9. Limitación de Responsabilidad</h2>
+          <p class="text-chocolate/80 leading-relaxed">
+            Dulce Tentación no se hace responsable de: daños derivados del uso indebido de los productos, demoras por causas de fuerza mayor, problemas técnicos del sitio web, ni de cualquier daño indirecto derivado de la relación comercial.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">10. Ley Aplicable y Jurisdicción</h2>
+          <p class="text-chocolate/80 leading-relaxed">
+            Estos términos se rigen por la legislación de la República de Chile. Para cualquier controversia, las partes se someten a los Tribunales de Justicia de Santiago de Chile, salvo en los casos en los que la legislación procesal o de protección al consumidor aplicable fije otro fuero distinto.
+          </p>
+        </section>
+
+        <section class="bg-rosa-claro/40 p-6 rounded-2xl">
+          <h2 class="font-display font-bold text-2xl mb-3 text-rosa-oscuro">11. Contacto</h2>
+          <p class="text-chocolate/80 leading-relaxed mb-3">
+            Para cualquier duda sobre estos términos, puedes contactarnos:
+          </p>
+          <ul class="space-y-2 text-chocolate/80">
+            <li>📧 <strong>Email:</strong> info@dulcetentacion.cl</li>
+            <li>📞 <strong>Teléfono:</strong> +56 2 2897 5432</li>
+            <li>📍 <strong>Dirección:</strong> Av. Providencia 1234, Providencia, Santiago, Chile</li>
+            <li>🕐 <strong>Horario:</strong> Lun-Vie 9:00-14:00 / 16:00-20:30 / Sáb 10:00-21:00</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- Botón volver -->
+      <div class="mt-12 text-center" data-aos="fade-up">
+        <a href="index.html" class="btn-secondary">
+          <svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          Volver al inicio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-chocolate text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/logo.svg" alt="Logo" class="w-10 h-10">
+            <span class="font-display font-bold text-2xl">Dulce Tentación</span>
+          </div>
+          <p class="text-white/70 max-w-md">Pastelería artesanal hecha con amor. Endulzando los momentos más especiales de tu vida desde 2010.</p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-medio transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-medio transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-medio transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg mb-4">Navegación</h4>
+          <ul class="space-y-2 text-white/70">
+            <li><a href="index.html" class="hover:text-rosa-medio transition">Inicio</a></li>
+            <li><a href="nosotros.html" class="hover:text-rosa-medio transition">Nosotros</a></li>
+            <li><a href="servicios.html" class="hover:text-rosa-medio transition">Servicios</a></li>
+            <li><a href="galeria.html" class="hover:text-rosa-medio transition">Galería</a></li>
+            <li><a href="clases.html" class="hover:text-rosa-medio transition">Clases</a></li>
+            <li><a href="precios.html" class="hover:text-rosa-medio transition">Precios</a></li>
+            <li><a href="contacto.html" class="hover:text-rosa-medio transition">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg mb-4">Legal</h4>
+          <ul class="space-y-2 text-white/70">
+            <li><a href="politicas.html" class="hover:text-rosa-medio transition">Políticas de Privacidad</a></li>
+            <li><a href="terminos.html" class="hover:text-rosa-medio transition">Términos y Condiciones</a></li>
+          </ul>
+          <h4 class="font-display font-bold text-lg mt-6 mb-4">Contacto</h4>
+          <ul class="space-y-2 text-white/70 text-sm">
+            <li>📞 +56 2 2897 5432</li>
+            <li>✉️ hola@dulcetentacion.cl</li>
+            <li>📍 Av. Providencia 1234, Santiago</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+        <p>© 2026 Dulce Tentación. Todos los derechos reservados. Hecho con 💕 y mucha azúcar.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
