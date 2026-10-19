@@ -18,12 +18,18 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--color-crema);
   color: var(--color-chocolate);
+  overflow-x: clip;
+}
+
+.grid > * {
+  min-width: 0;
 }
 
 .font-display {
@@ -287,19 +293,25 @@ body {
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 80%;
   max-width: 320px;
   height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  visibility: hidden;
+  transform: translateX(100%);
   background-color: var(--color-crema);
   z-index: 100;
-  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
   padding: 2rem;
 }
 
 .mobile-menu.active {
-  right: 0;
+  visibility: visible;
+  transform: translateX(0);
 }
 
 .mobile-overlay {
@@ -315,6 +327,131 @@ body {
 .mobile-overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* Keep headings, cards and navigation comfortable on narrow screens. */
+@media (max-width: 767px) {
+  #navbar {
+    background-color: rgba(255, 251, 247, 0.97);
+  }
+
+  #navbar .h-20 {
+    height: 4rem;
+  }
+
+  #navbar > div > div > a {
+    min-width: 0;
+  }
+
+  #navbar img {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #navbar .font-display {
+    font-size: clamp(1rem, 4.8vw, 1.25rem);
+  }
+
+  #mobileMenuBtn, #mobileCloseBtn {
+    min-width: 44px;
+    min-height: 44px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .mobile-menu {
+    padding: 1.5rem;
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+
+  .mobile-menu > .flex {
+    gap: 1rem;
+    margin-top: 3.5rem;
+  }
+
+  body > section.pt-32 {
+    padding-top: 7rem;
+    padding-bottom: 2.5rem;
+  }
+
+  body > section.py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  section .mb-16 {
+    margin-bottom: 2rem;
+  }
+
+  h1.font-display {
+    font-size: clamp(2rem, 8.5vw, 3rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  h2.font-display.text-4xl {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    line-height: 1.2;
+  }
+
+  section p.text-lg {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  section .p-8 {
+    padding: 1.5rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-inline: 1.5rem;
+  }
+
+  .btn-primary svg, .btn-secondary svg {
+    flex-shrink: 0;
+  }
+
+  #planes-container .text-5xl {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  #productos-container .flex.justify-between {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  table .p-5 {
+    padding: 1rem;
+  }
+
+  a[href^="mailto:"] {
+    overflow-wrap: anywhere;
+  }
+
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  /* Horizontal entrance animations must not widen the mobile layout. */
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-aos] { opacity: 1 !important; transform: none !important; }
+  .float-animation, .rotate-animation { animation: none; }
 }
 
 /* Print styles */

@@ -42,21 +42,54 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileCloseBtn = document.getElementById('mobileCloseBtn');
   
   if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.setAttribute('aria-label', 'Abrir menú de navegación');
+    mobileMenuBtn.setAttribute('aria-controls', 'mobileMenu');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    if (mobileCloseBtn) mobileCloseBtn.setAttribute('aria-label', 'Cerrar menú de navegación');
+    mobileMenu.inert = true;
+
     const openMenu = () => {
+      mobileMenu.inert = false;
       mobileMenu.classList.add('active');
-      mobileOverlay.classList.add('active');
+      if (mobileOverlay) mobileOverlay.classList.add('active');
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
+      if (mobileCloseBtn) mobileCloseBtn.focus();
     };
     
     const closeMenu = () => {
       mobileMenu.classList.remove('active');
-      mobileOverlay.classList.remove('active');
+      if (mobileOverlay) mobileOverlay.classList.remove('active');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      mobileMenu.inert = true;
       document.body.style.overflow = '';
+      mobileMenuBtn.focus();
     };
     
     mobileMenuBtn.addEventListener('click', openMenu);
     if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMenu);
     if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', event => {
+      if (!mobileMenu.classList.contains('active')) return;
+      if (event.key === 'Escape') closeMenu();
+      if (event.key === 'Tab') {
+        const controls = mobileMenu.querySelectorAll('a[href], button');
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    window.matchMedia('(min-width: 1024px)').addEventListener('change', event => {
+      if (event.matches && mobileMenu.classList.contains('active')) closeMenu();
+    });
     
     // Cerrar al hacer click en un link
     document.querySelectorAll('.mobile-menu a').forEach(link => {
